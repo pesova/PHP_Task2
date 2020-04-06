@@ -1,0 +1,198 @@
+.startng {
+    text-decoration: none;
+    font-size: 50px;
+    text-align: center;
+    color: #4CAF50;
+}
+
+.reg {
+    font-size: 30px;
+}
+
+.form {
+    background-color: #fefefe;
+    margin: 5% auto 1% auto;
+    border: 1px solid #888;
+    width: 60%;
+    padding: 30px;
+    border-radius: 20px;
+}
+
+input {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    border-radius: 20px;
+    outline: none;
+    background-color: rgb(243, 243, 243);
+}
+
+a {
+    padding: 10px;
+    text-decoration: none;
+}
+
+a:hover {
+    opacity: 0.6;
+}
+
+#select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    border-radius: 20px;
+    outline: none;
+    background-color: rgb(243, 243, 243);
+}
+
+#select option {
+    width: 100%;
+    padding: 18px 20px;
+    margin: 15px;
+    box-sizing: border-box;
+    border-radius: 20px;
+    outline: none;
+    background-color: rgb(243, 243, 243);
+}
+
+
+/* Set a style for all buttons */
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 10px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 10px;
+}
+
+button:hover {
+    opacity: 0.5;
+}
+
+h2 {
+    text-align: center;
+    margin: 20px 10px 2px 0;
+    position: relative;
+}
+
+p {
+    text-align: center;
+    margin: 0;
+}
+
+.error {
+    color: red;
+    font-size: 25px;
+    text-align: center;
+    position: relative;
+    bottom: 770px;
+}
+
+.success {
+    color: green;
+}
+
+.patient {
+    background-color: rgb(230, 227, 227);
+    margin: 0px;
+    border: 0px;
+    border-color: rgb(3, 5, 148);
+    padding-bottom: 50px;
+    height: 550px;
+    width: 100%;
+}
+
+.patient h3 {
+    color: rgb(77, 189, 83);
+    padding: 20px;
+    font-size: 40px;
+}
+
+.patient b {
+    padding: 15px;
+}
+
+.patient pre {
+    padding-left: 15px;
+    color: rgb(204, 7, 7);
+}
+
+.patient .logout {
+    padding: 10px;
+    text-align: center;
+    text-decoration: solid;
+    font-size: 20px;
+}
+
+.medical {
+    background-color: rgb(230, 227, 227);
+    margin: 0px;
+    border: 0px;
+    border-color: red;
+    padding-bottom: 50px;
+    height: 550px;
+    width: 100%;
+}
+
+.medical h3 {
+    color: rgb(77, 189, 83);
+    padding: 20px;
+    font-size: 40px;
+}
+
+.medical b {
+    padding: 15px;
+}
+
+.medical pre {
+    padding-left: 15px;
+    color: rgb(204, 7, 7);
+}
+
+.medical .logout {
+    padding: 10px;
+    text-align: center;
+    font-size: 20px;
+}
+
+.Home {
+    background-color: rgb(230, 227, 227);
+    margin: 0px;
+    border: 0px;
+    padding-bottom: 50px;
+    height: 550px;
+    width: 100%;
+}
+
+.Home h1 {
+    text-decoration: none;
+    font-size: 50px;
+    text-align: center;
+    color: #4CAF50;
+}
+
+.Home p {
+    font-size: 20px;
+    text-decoration: rgb(3, 5, 148);
+}
+
+.superAdmin {
+    background-color: rgb(230, 227, 227);
+    margin: 0px;
+    border: 0px;
+    border-color: red;
+    padding-bottom: 50px;
+    height: 550px;
+    width: 100%;
+    font-size: 30px;
+}
