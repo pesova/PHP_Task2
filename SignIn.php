@@ -1,3 +1,5 @@
+<?php require_once('functions/alert.php');?>
+
 <!DOCTYPE html>
   <html>
   <head>
@@ -11,32 +13,29 @@
   <body>
 
   <div>
-         <a  class="startng" href="index.php">StartNG Hospital</a>
-        </div>
 
-        <hr>
 
         <div class="reg">
-        <p><strong>Welcome, Login</strong></p>
+        <p class="lead"><strong>Welcome, Login</strong></p>
         </div>
-    
+
         <div class="mainContainer">
 
-       
+
          <form class="form" action="LoginConnection.php" method="POST">
 
 
             <br>
-        
+
 
             <label><b>Email Address</b></label>
-            <input <?php              
+            <input <?php
             if(isset($_SESSION['Email'])){
-                echo "value=" . $_SESSION['Email'];                                                             
-            }                
-        ?>  type="text" name="Email"  placeholder="Enter Email">';
-        
-            
+                echo "value=" . $_SESSION['Email'];
+            }
+        ?>  type="text" name="Email"  placeholder="Enter Email">
+
+
 
             <br>
 
@@ -44,22 +43,22 @@
             <input type="Password" name="Password" value="" placeholder="Enter Password">
 
             <br>
-            
+
             <button type="submit" name="submit">Sign In</button>
 
-            
+
             <p>
                 <a href="forgot.php">Forgot Password</a> <br>  <br>
                 <a href="Register.php">Don't have an account? Register</a>
             </p>
-         
-         
+         <br>
+
+
          </form>
-        
-         
-            
+
+
+
         </div>
- 
-        
-  </body>
-  </html>
+
+        <?php message(); ?>
+<?php require_once('Lib/footer.php');?>

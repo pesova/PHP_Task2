@@ -3,47 +3,16 @@
 //require_once('functions/alert.php');
 //require_once('functions/redirect.php');
 //require_once('functions/token.php');
-//require_once('functions/user.php');
+require_once('functions/FindUser.php');
+
+
 $Email  = $_POST['Email'];
 $Password  = $_POST['Password'];
 
 $_SESSION['Email'] = $Email;
 
-    
-
-function find_user($Email = ""){
-    //check the database if the user exsits
-    if(!$Email){
-        header("location: SignIn.php?error=user_not_set");
-        die();
-    } else{
-
-    
-
-    $allUsers = scandir("db/users/"); //return @array (2 filled)
-    $countAllUsers = count($allUsers);
-
-    for ($counter = 0; $counter < $countAllUsers ; $counter++) {
-       
-        $currentUser = $allUsers[$counter];
-
-        if($currentUser == $Email . ".json"){
-          //check the user password.
-            $userString = file_get_contents("db/users/".$currentUser);
-            $userObject = json_decode($userString);
-                       
-            return $userObject;
-          
-        }        
-        
-    }
-
-    return false;
-}
-}
-
-
-    $currentUser = find_user($Email); 
+    //find User (Function)
+    $currentUser = find_user($Email);
 
     if($currentUser){
       //check the user Password.
@@ -52,10 +21,10 @@ function find_user($Email = ""){
         $passwordFromDB = $userObject->Password;
 
         $passwordFromUser = password_verify($Password, $passwordFromDB);
-        
+
         if($passwordFromDB == $passwordFromUser){
             //redicrect to dashboard
-            $_SESSION['loggedIn'] = $userObject->id; 
+            $_SESSION['loggedIn'] = $userObject->id;
             $_SESSION['Email'] = $userObject->Email;
             $_SESSION['fullname'] = $userObject->first_name . " " . $userObject->last_name;
             $_SESSION['role'] = $userObject->designation;
@@ -74,20 +43,24 @@ function find_user($Email = ""){
             //redirecting to different page
             if ($userObject->designation == 'Patient') {
                 header("location: patient.php");
-            } else{
+            } elseif ($userObject->designation == 'Medical Team (MT)') {
                 header("location: medical.php");
+            }elseif ($userObject->designation == 'SuperAdmin') {
+                header("location: superAdmin.php");
             }
-            
+            else{
+                header("location: SignIn.php?Login=UserNotFound");
+                die();
+            }
             //header("location: dashboard.php?success");
-            
+
         } else{
-            header("location: SignIn.php?error=wrongpass");
+            header("location: SignIn.php?Login=wrongpass");
             die();
         }
-      
+
     } else{
-        header("location: SignIn.php?error=wrong");
+        header("location: SignIn.php?Login=wrongUser");
         die();
-        
-    }        
-    
+
+    }

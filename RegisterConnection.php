@@ -9,12 +9,12 @@ $Gender  = $_POST['Gender'];
 $designation  = $_POST['designation'];
 $Department  = $_POST['Department'];
 
+$_SESSION['Gender'] = $Gender;
+$_SESSION['designation'] = $designation;
 
 
 
 if(isset($_POST['submit'])){
-
-    //include_once 'database.php';
 
 //check if inputs are empty
 
@@ -67,16 +67,6 @@ if(isset($_POST['submit'])){
 
         // user didnt click submit
             else{
-            header("location: Register.php?signup=success");
+            header("location: Register.php?signup=ClickRegister");
             exit();
         }
-
-       
-
-/*
-$FirstName = mysqli_real_escape_string($connect, $_POST['FirstName']);
-$LastName = mysqli_real_escape_string($connect, $_POST['LastName']);
-$Email  = mysqli_real_escape_string($connect, $_POST['Email']);
-$PhoneNumber  = mysqli_real_escape_string($connect, $_POST['PhoneNumber']);
-designation  = mysqli_real_escape_string($connect, $_POST['UserName']);
-$Password  = mysqli_real_escape_string($connect, $_POST['Password']);

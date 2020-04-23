@@ -1,48 +1,53 @@
+<?php require_once('functions/alert.php');?>
+<?php require_once('Lib/header.php');?>
 
-<head>
-      <meta charset="utf-8" />
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <title>patient</title>
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <link rel="stylesheet" href="style.css">
-
-  </head>
-<div class="patient">
-
-<h3>Dashboard</h3>
-
-<hr>
-<?php 
-
-echo "<h1><p>This page is for Patient</p></h1>"
-?>
-<br>
-<div class="patient">
-
-<?php session_start();?>
 
 
+  <body>
+    <div class="patient">
 
-<B>Welcome, <?php echo $_SESSION['fullname'] ?>, You are logged in as (<?php echo $_SESSION['role'] ?>), and your ID is <?php echo $_SESSION['loggedIn'] ?></b>
+      <br>
 
-<?php (getdate());
-echo "<br><br>";
+    <h3 class="nav-item">Dashboard</h3>
 
-$mydate = getdate(date("U"));
-?>
+    <?php
 
-<pre>Logedd in Time:  <?php echo  $_SESSION['Time']?></pre>
+    echo "<h1><p>This page is for Patient</p></h1>"
+    ?>
+    <br>
+    <div class="patient">
 
-<pre>Logged in date: <?php echo  $_SESSION['Date']?></pre>
+    <?php session_start();?>
 
-<br>
 
-<div class="logout">
-    <a href="index.php">Home</a>
-  </div>
 
-<div class="logout">
-    <a href="logout.php">Logout</a>
-</div>
+    <B class="lead font-weight-bolder" >Welcome, <?php echo $_SESSION['fullname'] ?>, You are logged in as (<?php echo $_SESSION['role'] ?>), and your ID is <?php echo $_SESSION['loggedIn'] ?></b>
 
-</div>
+    <?php (getdate());
+    echo "<br><br>";
+
+    $mydate = getdate(date("U"));
+    ?>
+
+    <pre class="text-danger">Logedd in Time:  <?php echo  $_SESSION['Time']?></pre>
+
+    <pre class="text-danger">Logged in date: <?php echo  $_SESSION['Date']?></pre>
+
+    <br>
+    <br>
+
+    <div class="Action">
+        
+        <a class="login  btn btn-info" href="BookAppointment.php">Book Appointment</a>
+
+        <a class="login  btn btn-info" href="Paybills.php">Paybills</a>
+
+        <a class="login  btn btn-secondary" href="logout.php">Logout</a>
+      </div>
+
+
+<?php Appointment(); ?>
+    </div>
+
+<?php require_once('Lib/footer.php');?>
