@@ -1,5 +1,6 @@
-<?php require_once('functions/alert.php');?>
 <?php session_start(); ?>
+<?php require_once('functions/alert.php');?>
+
 
   <!DOCTYPE html>
   <html>
@@ -131,8 +132,8 @@
             <button type="submit" name="submit">Sign Up</button>
 
             <p>
-                    <a href="forgot.php">Forgot Password</a><br /> <br>
-                    <a href="Signin.php">Already have an account? Login</a>
+                 <br>
+                    <a href="SignIn.php">Already have an account? Login</a>
             </p>
 
     </div>

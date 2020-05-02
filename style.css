@@ -1,8 +1,10 @@
-*{
-  padding: 0px;
-  border: 0px;
-  margin: 0px;
+* {
+    padding: 0px;
+    border: 0px;
+    margin: 0px;
 }
+
+
 /*.startng {
     text-decoration: none;
     font-size: 50px;
@@ -14,6 +16,7 @@
     font-size: 30px;
 }
 */
+
 .form {
     background-color: #fefefe;
     margin: 5% auto 1% auto;
@@ -34,17 +37,18 @@ input {
     outline: none;
     background-color: rgb(243, 243, 243);
 }
-textarea{
-  width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  box-sizing: border-box;
-  border-radius: 20px;
-  outline: none;
-  background-color: rgb(243, 243, 243);
-  font-size: 120%;
+
+textarea {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    border-radius: 20px;
+    outline: none;
+    background-color: rgb(243, 243, 243);
+    font-size: 120%;
 }
 
 a {
@@ -70,7 +74,7 @@ a:hover {
 
 #select option {
     width: 100%;
-    padding: 18px 20px;
+    padding: 1px 2px;
     margin: 15px;
     box-sizing: border-box;
     border-radius: 20px;
@@ -102,10 +106,66 @@ h2 {
     position: relative;
 }
 
+#H1 {
+    text-align: center;
+    margin: 20px 10px 2px 0;
+    position: relative;
+    font-size: 170%;
+}
+
+.display-4 {
+    font-size: 150%;
+}
+
 p {
     text-align: center;
     margin: 0;
 }
+
+@media only screen and (max-width: 525px) {
+    .form {
+        background-color: #fefefe;
+        margin: 5% auto 1% auto;
+        border: 1px solid #888;
+        width: 95%;
+        padding: 20px;
+        border-radius: 20px;
+    }
+    input {
+        width: 100%;
+        padding: 8px 15px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+        border-radius: 20px;
+        outline: none;
+        background-color: rgb(243, 243, 243);
+    }
+    button {
+        background-color: #4CAF50;
+        color: white;
+        padding: 10px 15px;
+        margin: 10px 0;
+        border: none;
+        cursor: pointer;
+        width: 100%;
+        border-radius: 10px;
+    }
+    #H1 {
+        text-align: center;
+        margin: 20px 10px 2px 0;
+        position: relative;
+        font-size: 100%;
+    }
+    .display-4 {
+        font-size: 100%;
+    }
+    .respon {
+        font-size: 80%;
+    }
+}
+
 
 /*.error {
     color: red;
@@ -117,6 +177,8 @@ p {
     font-size: 20px;
 }
 */
+
+
 /*.patient {
     background-color: rgb(230, 227, 227);
     margin: 0px;
@@ -149,6 +211,8 @@ p {
     font-size: 20px;
 }
 */
+
+
 /*.medical {
     background-color: rgb(230, 227, 227);
     margin: 0px;
@@ -180,6 +244,8 @@ p {
     font-size: 20px;
 }
 */
+
+
 /*.Home {
     background-color: rgb(230, 227, 227);
     margin: 0px;

@@ -1,3 +1,11 @@
+<?php
+if(!isset($_SESSION['loggedIn'])){
+  header("location: SignIn.php?login=expireded");
+  exit();
+}
+?>
+
+
 <?php require_once('Lib/header.php');?>
       <title>superAdmin</title>
 

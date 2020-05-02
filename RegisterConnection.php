@@ -26,7 +26,7 @@ if(isset($_POST['submit'])){
         else{
         //check if inputs are valid
 
-        if(!preg_match("/^[a-zA-Z]*$/", $FirstName) ||  !preg_match("/^[a-zA-Z]*$/", $LastName) || !preg_match("/^[a-zA-Z]*$/", designation)){
+        if(!preg_match("/^[a-zA-Z]*$/", $FirstName) ||  !preg_match("/^[a-zA-Z]*$/", $LastName) || !preg_match("/^[a-zA-Z]*$/", $Department)){
 
             header("location: Register.php?signup=CharError");
             exit();

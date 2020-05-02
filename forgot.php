@@ -1,3 +1,4 @@
+<?php session_start();?>
 <?php require_once('functions/alert.php');?>
 <?php require_once('Lib/header.php');?>
 
@@ -14,7 +15,7 @@
         <input
 
         <?php
-        session_start();
+        
             if(isset($_SESSION['Email'])){
                 echo "value=" . $_SESSION['Email'];
             }

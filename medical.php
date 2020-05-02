@@ -1,3 +1,12 @@
+<?php session_start();
+
+if(!isset($_SESSION['loggedIn'])){
+  header("location: SignIn.php?login=expireded");
+  exit();
+}
+?>
+
+
 <?php require_once('Lib/header.php');?>
 <head>
 
@@ -14,7 +23,7 @@ echo "<h1><p>This page is for medical</p></h1>";
 ?>
 
 <br> <br>
-<?php session_start();?>
+
 
 
 <B class="lead font-weight-bolder">Welcome, <?php echo $_SESSION['fullname'] ?>, You are logged in as (<?php echo $_SESSION['role'] ?>), and your ID is <?php echo $_SESSION['loggedIn'] ?></b>
@@ -34,10 +43,10 @@ $mydate = getdate(date("U"));
 
 
   <div class="Action">
-    
-    <a class="login  btn btn-info" href="AllAppointments.php">All Appointments</a>
 
-    <a class="login  btn btn-secondary" href="logout.php">Logout</a>
+    <a class="btn btn-info" href="AllAppointments.php">All Appointments</a>
+
+    <a class="btn btn-secondary" href="logout.php">Logout</a>
   </div>
 
 </div>

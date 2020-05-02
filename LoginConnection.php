@@ -41,19 +41,28 @@ $_SESSION['Email'] = $Email;
             file_put_contents("db/Time/".  $_SESSION['Email'] . ".json", json_encode($dateTime));
 
             //redirecting to different page
-            if ($userObject->designation == 'Patient') {
-                header("location: patient.php");
-            } elseif ($userObject->designation == 'Medical Team (MT)') {
-                header("location: medical.php");
-            }elseif ($userObject->designation == 'SuperAdmin') {
-                header("location: superAdmin.php");
-            }
-            else{
-                header("location: SignIn.php?Login=UserNotFound");
-                die();
-            }
-            //header("location: dashboard.php?success");
+            if(isset($_POST['submit'])){
 
+                $_SESSION['loggedIn'] = $_POST['submit'];
+
+                if ($userObject->designation == 'Patient') {
+                    header("location: patient.php");
+                } elseif ($userObject->designation == 'Medical Team (MT)') {
+                    header("location: medical.php");
+                }elseif ($userObject->designation == 'SuperAdmin') {
+                    header("location: superAdmin.php");
+                }
+                else{
+                    header("location: SignIn.php?Login=UserNotFound");
+                    die();
+                }
+            } else{
+                header("location: SignIn.php?login=expired");
+                exit();
+            }
+            
+        
+        //wrong user password
         } else{
             header("location: SignIn.php?Login=wrongpass");
             die();

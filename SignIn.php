@@ -48,8 +48,8 @@
 
 
             <p>
-                <a href="forgot.php">Forgot Password</a> <br>  <br>
-                <a href="Register.php">Don't have an account? Register</a>
+                <a class = "respon" href="forgot.php">Forgot Password</a> <br>  <br>
+                <a class = "respon" href="Register.php">Don't have an account? Register</a>
             </p>
          <br>
 

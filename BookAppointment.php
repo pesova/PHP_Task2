@@ -1,3 +1,4 @@
+<?php session_start();?>
 <?php require_once('functions/alert.php');?>
 
 <!DOCTYPE html>
@@ -5,7 +6,7 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Sign up</title>
+    <title>Book Appointment</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="stylesheet" href="style.css">
@@ -15,7 +16,7 @@
 
       <h2>   Book Appointment</h2>
 
-<?php session_start();?>
+
 
       <form class="form" action="AppointmentProcess.php" method="post">
 
