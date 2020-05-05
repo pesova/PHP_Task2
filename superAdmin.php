@@ -1,24 +1,34 @@
-<head>
-      <meta charset="utf-8" />
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <title>superAdmin</title>
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <link rel="stylesheet" href="style.css">
+<?php session_start();?>
 
-  </head>
-
-
-<div class="superAdmin">
-
-<?php 
-
-echo "This page is for the super Admin"
+<?php
+if(!isset($_SESSION['loggedIn'])  || $_SESSION['Medical'] !== 'SuperAdmin'){
+  header("location: SignIn.php?login=expireded");
+  exit();
+}
 ?>
 
-<div class="logout">
-    <a href="logout.php">Logout</a>
+<?php require_once('Lib/header.php');?>
+      <title>superAdmin</title>
+
+
+
+<div class="container-fluid">
+
+
+
+  <p class="lead display-4">This page is for the super Admin</p>
+
+  <br>
+  <br>
+    <div class="">
+      <a class="Register login  btn btn-secondary btn-lg" href="logout.php">Logout</a>
+
+      <a class="Register login  btn btn-info btn-lg" href="Register.php">Add users</a>
+
+      <a class="Register login  btn btn-info btn-lg" href="AllPatients.php">View Patients</a>
+
+      <a class="Register login  btn btn-info btn-lg" href="AllStaffs.php">All Staffs</a>
+    </div>
   </div>
 
-<a href="Register.php">Add users</a>
-
-</div>
+<?php require_once('Lib/footer.php');?>

@@ -1,3 +1,6 @@
+<?php require_once('functions/alert.php');?>
+<?php session_start(); ?>
+
   <!DOCTYPE html>
   <html>
   <head>
@@ -7,30 +10,20 @@
       <meta name="viewport" content="width=device-width, initial-scale=1">
 
       <link rel="stylesheet" href="style.css">
-      
-      
 
-     
-      <script src="main.js"></script>
       </head>
-      <body>
-    
+
     <div class="mainContainer">
 
-    <body>
-        <div>
-         <a  class="startng" href="index.php">StartNG Hospital</a>
-        </div>
 
-        <hr>
-
-        <div class="reg">
+        <div class="display-4">
+            <br>
         <p><strong>Welcome, Please Register</strong></p>
         </div>
-    
+
          <form class="form" action="RegisterConnection.php" method="POST">
-            
-         <?php 
+
+         <?php
          if(isset($_GET['FirstName'])){
              $FirstName = $_GET['FirstName'];
              echo '<label><b>FirstName</b></label>
@@ -52,7 +45,7 @@
             <input type="text" name="LastName" value="" placeholder="Enter LastName">';
         }
          ?>
-                     
+
             <br>
             <?php
 
@@ -70,47 +63,47 @@
             <br>
 
             <label><b>Password</b></label>
-            <input type="Password" name="Password" value="" placeholder="Enter Password">
+            <input type="Password" name="Password" value="" placeholder="Enter Password" pattern="(?=.*[a-z])(?=.*[A-Z]).{6,}" title="Must contain at least one uppercase and lowercase letter, and at least 6 or more characters" required>
 
             <br>
-            <label for=""><b>Gender</b></label>  <br>
+            <label for=""><b>Gender</b></label>  
             <select id="select" name="Gender" id="Gender">
                 <option value="">Select One</option>
-                <option <?php              
+                <option <?php
             if(isset($_SESSION['Gender']) && $_SESSION['Gender'] == 'Male'){
-            echo "selected";                                                           
-            }                
+            echo "selected";
+            }
         ?>
                 >Male</option>
 
 
-                <option <?php              
+                <option <?php
             if(isset($_SESSION['Gender']) && $_SESSION['Gender'] == 'Female'){
-            echo "selected";                                                           
-            }                
+            echo "selected";
+            }
         ?>
                 >Female</option>
             </select>
 
       <br>
 
-            <label><b>Designation</b></label><br />
+            <label><b>Designation</b></label>
             <select id="select" name="designation" >
 
                 <option value="">Select One</option>
-                <option 
-        <?php              
+                <option
+        <?php
             if(isset($_SESSION['designation']) && $_SESSION['designation'] == 'Medical Team (MT)'){
-            echo "selected";                                                           
-            }                
+            echo "selected";
+            }
         ?>
                 >Medical Team (MT)</option>
-                
-                <option 
-                <?php              
+
+                <option
+                <?php
                 if(isset($_SESSION['designation']) && $_SESSION['designation'] == 'Patient'){
-            echo "selected";                                                           
-            }                
+            echo "selected";
+            }
                 ?>
                   >Patient</option>
                  </select>
@@ -133,50 +126,21 @@
 
         ?>
 
-                       
-            <br>
-            
+
+            <br><br>
+
             <button type="submit" name="submit">Sign Up</button>
-         
+
             <p>
-                    <a href="forgot.php">Forgot Password</a><br /> <br>
-                    <a href="Signin.php">Already have an account? Login</a>
+                    <br>
+                    <a class = "respon" href="Signin.php">Already have an account? Login</a>
             </p>
-        
+
     </div>
- 
-        
-        <?php
-        //error handlers
-        if(!isset($_GET['signup'])){
-            exit();
-        }
-        else{
-            $signupcheck = $_GET['signup'];
-
-            if($signupcheck == "empty"){
-                echo "<p class='error'>Fill in fields!</p>";
-                exit();
-            }
-            elseif($signupcheck == "CharError"){
-                echo "<p class='error'>You used invalid characters</p>";
-                exit();
-            }
-            elseif($signupcheck == "Email"){
-                echo "<p class='error'>Fill in valid email</p>";
-                exit();
-            }
-            elseif($signupcheck == "success"){
+    <?php RegisterAlert()  //error handlers?>
 
 
-                echo "<p class='success'>You have signed up</p>";
-                
-                exit();
-            }
-        }
 
-        ?>
-       
         </form>
     </body>
 

@@ -1,4 +1,5 @@
 <?php session_start();
+require_once('functions/FindUser.php');
 
 
 $FirstName = $_POST['FirstName'];
@@ -9,12 +10,12 @@ $Gender  = $_POST['Gender'];
 $designation  = $_POST['designation'];
 $Department  = $_POST['Department'];
 
+$_SESSION['Gender'] = $Gender;
+$_SESSION['designation'] = $designation;
 
 
 
 if(isset($_POST['submit'])){
-
-    //include_once 'database.php';
 
 //check if inputs are empty
 
@@ -31,7 +32,7 @@ if(isset($_POST['submit'])){
             header("location: Register.php?signup=CharError");
             exit();
         }  
-            else{
+        else{
 
             //check if email is valid
             if(!filter_var($Email, FILTER_VALIDATE_EMAIL)){
@@ -39,7 +40,7 @@ if(isset($_POST['submit'])){
             header("location: Register.php?signup=Email&FirstName=$FirstName&LastName=$LastName&designation=$designation");
             exit(); 
             }
-                else{
+            else{             
 
                     $allUsers = scandir("db/users/"); //return @array (2 filled)
                     $countAllUsers = count($allUsers);
@@ -55,28 +56,30 @@ if(isset($_POST['submit'])){
                         'designation'=>$designation,
                         'department'=>$Department
                     ];
-                    
+
+                    for ($counter = 0; $counter < $countAllUsers ; $counter++) {
+       
+                        $currentUser = $allUsers[$counter];
+                
+                        if($currentUser == $Email . ".json"){
+                          //check if the user exist.
+                          header("location: SignIn.php?login=UserExistAlready");
+                          die();
+                        }
+                        //store user to database
                         file_put_contents("db/users/". $userObject['Email'] . ".json", json_encode($userObject));
 
-                        header("location: SignIn.php?success");
+                        header("location: SignIn.php?successs");
+                    }
 
-                }
+                
             }
         }
     }
+}
 
         // user didnt click submit
-            else{
-            header("location: Register.php?signup=success");
-            exit();
-        }
-
-       
-
-/*
-$FirstName = mysqli_real_escape_string($connect, $_POST['FirstName']);
-$LastName = mysqli_real_escape_string($connect, $_POST['LastName']);
-$Email  = mysqli_real_escape_string($connect, $_POST['Email']);
-$PhoneNumber  = mysqli_real_escape_string($connect, $_POST['PhoneNumber']);
-designation  = mysqli_real_escape_string($connect, $_POST['UserName']);
-$Password  = mysqli_real_escape_string($connect, $_POST['Password']);
+else{
+    header("location: Register.php?signup=ClickRegister");
+        exit();
+    }

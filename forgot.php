@@ -1,19 +1,23 @@
-  
-   <h3>Forgot Password</h3>
-   <p>Provide the email address associated with your account</p>
+<?php require_once('functions/alert.php');?>
+<?php require_once('Lib/header.php');?>
 
-   <form action="processforgot.php" method="POST">
+
+   <h3>Forgot Password</h3>
+   <p class="lead text-uppercase font-weight-bolder">Provide the email address associated with your account</p>
+
+   <form class="form" action="processforgot.php" method="POST">
    <p>
-        
+
     </p>
    <p>
-        <label>Email</label><br />
+        <label>Email</label>
         <input
-        
-        <?php              
+
+        <?php
+        session_start();
             if(isset($_SESSION['Email'])){
-                echo "value=" . $_SESSION['Email'];                                                             
-            }                
+                echo "value=" . $_SESSION['Email'];
+            }
         ?>
 
             type="text" name="Email" placeholder="Email"  />
@@ -21,5 +25,11 @@
     <p>
         <button type="submit">Send Reset Code</button>
     </p>
+
+
+
+
+    <?php forgotAlert()  //error handlers?>
    </form>
-    
+
+<?php require_once('Lib/footer.php');?>
