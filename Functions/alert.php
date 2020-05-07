@@ -90,6 +90,10 @@ else{
                 echo "<p class='alert alert-danger'>You used invalid characters</p>";
                 exit();
             }
+            elseif($signupcheck == "UserExistAlready"){
+                echo "<p class='alert alert-danger'>User Already Exists</p>";
+                exit();
+            }
             elseif($signupcheck == "Email"){
                 echo "<p class='alert alert-danger'>Fill in valid email</p>";
                 exit();

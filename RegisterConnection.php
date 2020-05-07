@@ -63,15 +63,14 @@ if(isset($_POST['submit'])){
                 
                         if($currentUser == $Email . ".json"){
                           //check if the user exist.
-                          header("location: SignIn.php?login=UserExistAlready");
+                          header("location: Register.php?signup=UserExistAlready");
                           die();
                         }
-                        //store user to database
-                        file_put_contents("db/users/". $userObject['Email'] . ".json", json_encode($userObject));
-
-                        header("location: SignIn.php?successs");
                     }
+                      //store user to database
+                      file_put_contents("db/users/". $userObject['Email'] . ".json", json_encode($userObject));
 
+                      header("location: SignIn.php?successs");
                 
             }
         }
