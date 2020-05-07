@@ -1,10 +1,10 @@
 Hosted link: https://pesova.000webhostapp.com/ (still working on it)
 
-The task 3 is in PhpTask3
+This is PhpTask3
 
 this is a hospital app. more features will be added later
 
-after downloading this repo, click on the index.php to be directed to home page
+after downloading this repo and connected to your own local host, click on the index.php to be directed to home page
 
 from there you can create account and login
 
