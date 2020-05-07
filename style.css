@@ -4,6 +4,13 @@
     margin: 0px;
 }
 
+.container-fluid {
+    padding-right: 0px;
+    padding-left: 0px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
 .containerr {
     border-radius: 15px;
     display: grid;
@@ -13,8 +20,16 @@
     min-height: 100%;
 }
 
-.containerr:hover {
-    box-shadow: rgb(0, 0, 0, 0.8);
+#bg-dark {
+    background-color: rgb(173, 173, 173);
+}
+
+#infoMeeting {
+    background-color: rgba(182, 179, 179, 0.678);
+}
+
+.mainGrid {
+    height: 400px;
 }
 
 
@@ -49,15 +64,6 @@ input {
     border-radius: 20px;
     outline: none;
     background-color: rgb(243, 243, 243);
-}
-
-#AppointmentInput {
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: none;
-    outline: none;
 }
 
 textarea {

@@ -39,7 +39,7 @@
                             
 
                             $subject = "Password Reset Link";
-                            $Message = "A password reset have been initiated from you, if you did not initiate this reset, please ignore this message, otherwise visit: http://localhost:8080/HNGTask3/reset.php?token=".$token;
+                            $Message = "A password reset have been initiated from you, if you did not initiate this reset, please ignore this message, otherwise visit: http://localhost:8080/HNGTask3-WithFunctions/reset.php?token=".$token;
                             $headers = "From: no-reply@snh.org" . "\r\n" .
                             "CC: peso@snh.org";
 

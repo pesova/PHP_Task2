@@ -1,4 +1,5 @@
-<?php require_once('functions/alert.php');?>
+<?php require_once('functions/alert.php');
+ require_once('Lib/header.php');?>
 
 
       <title>Login</title>
@@ -15,9 +16,7 @@
 
 
          <form class="form" action="LoginConnection.php" method="POST">
-
-
-            <br>
+<br>
 
 
             <label><b>Email Address</b></label>

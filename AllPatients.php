@@ -3,14 +3,14 @@
 
                 <h2>  All Patients</h2>
 
-                <div class="table table-bordered table-hover table-responsive-sm">
-                     <table class="table-responsive-sm">
+                <div>
+                     <table class="table table-bordered table-hover table-responsive-sm">
                          <thead class="thead-light ">
-                          <tr class="">
+                          <tr class="col">
                             <th><b>ID</b></th>
                             <th><b>FirstName</b></th>
                             <th><b>LastName</b></th>
-                            <th class="col"><b>Email</b></th>
+                            <th><b>Email</b></th>
                             <th><b>Gender</b></th>
                             <th><b>Designation</b></th>
                             <th><b>Department</b></th>

@@ -11,17 +11,17 @@
              $countAllAppointments = count($allAppointments);
         ?>
 
-        <div class="table table-bordered table-hover table-responsive-sm">
-             <table class="table-responsive-sm">
+        <div class="table">
+             <table class="table table-bordered table-hover table-responsive-sm">
                  <thead class="thead-light ">
-                  <tr class="col-sm-4">
+                  <tr class="col">
                     <th><b>ID:</b></th>
                     <th><b>FullName:</b></th>
                     <th><b>Email:</b></th>
                     <th><b>Date:</b></th>
                     <th><b>Time:</b></th>
                     <th><b>Nature:</b></th>
-                    <th class="col"><b>Initial Complaint:</b></th>
+                    <th><b>Initial Complaint:</b></th>
                     <th><b>Department:</b></th>
                   </tr>
 

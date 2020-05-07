@@ -8,10 +8,22 @@
 
     <link rel="stylesheet" type="text/css" media="screen" href="bootstrap-4.4.1-dist\css\bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+
+    
   </head>
-<body class="container-fluid bg-light">
-    <ul class="nav nav-tabs nav-bar-nav bg-light">
-      <li class="nav-item">
-        <a  class="nav-link " data-toggle="pill" href="index.php">StartNG Hospital</a>
-      </li>
-    </ul>
+      
+<body class="bg-light">
+
+      <nav  class="nav navbar shadow-sm bg-dark">
+      <div class="nav-item">
+        <a  class="nav-link text-white" href="index.php">StartNG Hospital</a>
+      </div>
+      </nav>
+      <br>
+      <div class="body container-fluid">
+
+
+
+     
+    
+

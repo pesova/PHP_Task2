@@ -38,15 +38,15 @@ if (isset($_POST['pay'])) {
 $_SESSION['payment'] = $payment;
 
 //generating textref Token
-            $token = ""; 
-                    //generating random token
-                    $Alphabets = ['a','b','c','d','e','f','A','B','C','D','E','F'];
+  $token = ""; 
+  //generating random token
+  $Alphabets = ['a','b','c','d','e','f','A','B','C','D','E','F'];
 
-                        for ($i=0; $i < 15 ; $i++) { 
-                            # getting random texts and adding to the token
-                            $random = mt_rand(0,count($Alphabets)-1);
-                            $token .= $Alphabets[$random];
-                        }
+  for ($i=0; $i < 15 ; $i++) { 
+    # getting random texts and adding to the token
+    $random = mt_rand(0,count($Alphabets)-1);
+    $token .= $Alphabets[$random];
+  }
 
 //integrated rave code
 
@@ -71,7 +71,7 @@ curl_setopt_array($curl, array(
     'currency'=>$currency,
     'txref'=>$txref,
     'PBFPubKey'=>$PBFPubKey,
-    'redirect_url'=>$redirect_url,
+    'redirect_url'=>$redirect_url
  
   ]),
   CURLOPT_HTTPHEADER => [

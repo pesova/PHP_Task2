@@ -27,7 +27,7 @@ if (!isset($_GET['token'])) {
     </p>
 
     <label><b>New Password</b></label>
-            <input type="Password" name="Password" value="" placeholder="Enter Password">
+    <input type="Password" name="Password" value="" placeholder="Enter Password" pattern="(?=.*[a-z])(?=.*[A-Z]).{6,}" title="Must contain at least one uppercase and lowercase letter, and at least 6 or more characters" required>
             <br>
 
             <button type="submit">Reset Password</button>

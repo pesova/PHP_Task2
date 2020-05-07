@@ -51,6 +51,8 @@ echo "<h1 class='lead display-4'><p>This page is for Patient</p></h1>";
 
         <a class="btn btn-info" href="Paybills.php">Paybills</a>
 
+        <a class="btn btn-info" href="patientPayHistory.php">Payment Hisotry</a>
+
         <a class="btn btn-secondary" href="logout.php">Logout</a>
       </div>
         

@@ -1,7 +1,8 @@
 <?php
-session_start();
+    session_start();
 
-    if (isset($_GET['txref'])) {
+    if (isset($_GET['txref'])) 
+    {
         $ref = $_GET['txref'];
         $amount = $_SESSION['payment']; //Correct Amount from Server
         $currency = "NGN"; //Correct Currency from Server
@@ -37,34 +38,17 @@ session_start();
 
         if (($chargeResponsecode == "00" || $chargeResponsecode == "0") && ($chargeAmount == $amount)  && ($chargeCurrency == $currency)) {
           // transaction was successful...
+          header("location: sendPaymentMail.php?Payment=success");
+          exit();       
+          
 
-
-
-          $allPayments = scandir("db/payments/"); //return @array (2 filled)
-                    $countallPayments = count($allPayments);
-                    $newpaymentId = ($countallPayments-1);
-
-                    $paymentObject = [
-                        'id'=>$newpaymentId,
-                        'FullName'=>$_SESSION['fullname'],
-                        'Email'=>$_SESSION['Email'],
-                        'Amount'=> $_SESSION['payment'],
-                        'PaymentType'=>$_SESSION['MeetingType'],
-                        'designation'=>$designation,
-                        'department'=>$Department
-                    ];
-
-
-                     //store user to database
-                     file_put_contents("db/users/". $paymentObject['Email'] . ".json", json_encode($paymentObject));
-          header("location: paid.php?success");
         } else {
             //Dont Give Value and return to Failure page
-            header("location: paymentFail.php?success");
+            header("location: paymentFail.php?");
         }
-    }
-        else {
-      die('No reference supplied');
+    } else {
+        header("location: paybills.php?pay=errorfulll");
+      die();
     }
 
 ?>
