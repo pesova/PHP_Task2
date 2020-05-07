@@ -25,8 +25,6 @@ if(!isset($_SESSION['loggedIn'])  || $_SESSION['Medical'] !== 'SuperAdmin'){
 
       <a class="Register login  btn btn-info btn-lg m-1" href="Register.php">Add users</a>
 
-      <a class="btn btn-info btn-lg m-1" href="AllTransactions.php">All Transactions</a>
-
       <a class="Register login  btn btn-info btn-lg m-1" href="AllPatients.php">View Patients</a>
 
       <a class="Register login  btn btn-info btn-lg m-1" href="AllStaffs.php">All Staffs</a>
