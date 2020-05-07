@@ -30,14 +30,14 @@ if(isset($_POST['submit'])){
         if(!preg_match("/^[a-zA-Z]*$/", $FirstName) ||  !preg_match("/^[a-zA-Z]*$/", $LastName) || !preg_match("/^[a-zA-Z]*$/", designation)){
 
             header("location: Register.php?signup=CharError");
-            exit();
+        exit();
         }  
         else{
 
             //check if email is valid
             if(!filter_var($Email, FILTER_VALIDATE_EMAIL)){
                 
-            header("location: Register.php?signup=Email&FirstName=$FirstName&LastName=$LastName&designation=$designation");
+                header("location: Register.php?signup=Email&FirstName=$FirstName&LastName=$LastName&designation=$designation");
             exit(); 
             }
             else{             
