@@ -21,15 +21,15 @@ if(!isset($_SESSION['loggedIn'])  || $_SESSION['Medical'] !== 'SuperAdmin'){
   <br>
   <br>
     <div class="">
-      <a class="Register login  btn btn-secondary btn-lg" href="logout.php">Logout</a>
+      <a class="Register login  btn btn-secondary btn-lg m-1" href="logout.php">Logout</a>
 
-      <a class="Register login  btn btn-info btn-lg" href="Register.php">Add users</a>
+      <a class="Register login  btn btn-info btn-lg m-1" href="Register.php">Add users</a>
 
-      <a class="btn btn-info btn-lg" href="AllTransactions.php">All Transactions</a>
+      <a class="btn btn-info btn-lg m-1" href="AllTransactions.php">All Transactions</a>
 
-      <a class="Register login  btn btn-info btn-lg" href="AllPatients.php">View Patients</a>
+      <a class="Register login  btn btn-info btn-lg m-1" href="AllPatients.php">View Patients</a>
 
-      <a class="Register login  btn btn-info btn-lg" href="AllStaffs.php">All Staffs</a>
+      <a class="Register login  btn btn-info btn-lg m-1" href="AllStaffs.php">All Staffs</a>
     </div>
      <br><br>
   </div>

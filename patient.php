@@ -47,13 +47,13 @@ echo "<h1 class='lead display-4'><p>This page is for Patient</p></h1>";
 
     <div class="Action">
 
-        <a class="btn btn-primary" href="BookAppointment.php">Book Appointment</a>
+        <a class="btn btn-primary m-1" href="BookAppointment.php">Book Appointment</a>
 
-        <a class="btn btn-info" href="Paybills.php">Paybills</a>
+        <a class="btn btn-info m-1" href="Paybills.php">Paybills</a>
 
-        <a class="btn btn-info" href="patientPayHistory.php">Payment Hisotry</a>
+        <a class="btn btn-info m-1" href="patientPayHistory.php">Payment Hisotry</a>
 
-        <a class="btn btn-secondary" href="logout.php">Logout</a>
+        <a class="btn btn-secondary m-1" href="logout.php">Logout</a>
       </div>
         
 

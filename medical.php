@@ -45,11 +45,11 @@ $mydate = getdate(date("U"));
 
   <div class="Action">
 
-    <a class="btn btn-info" href="AllAppointments.php">All Appointments</a>
+    <a class="btn btn-info m-1" href="AllAppointments.php">All Appointments</a>
 
-    <a class="btn btn-info" href="AllTransactions.php">All Transactions</a>
+    <a class="btn btn-info m-1" href="AllTransactions.php">All Transactions</a>
 
-    <a class="btn btn-secondary" href="logout.php">Logout</a>
+    <a class="btn btn-secondary m-1" href="logout.php">Logout</a>
   </div>
 
 </div>
