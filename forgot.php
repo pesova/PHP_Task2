@@ -1,5 +1,7 @@
-<?php require_once('functions/alert.php');?>
-<?php require_once('Lib/header.php');?>
+<?php
+ session_start();
+ require_once('functions/alert.php');
+ require_once('Lib/header.php');?>
 
 
    <h3>Forgot Password</h3>
@@ -14,9 +16,8 @@
         <input
 
         <?php
-        session_start();
             if(isset($_SESSION['Email'])){
-                echo "value=" . $_SESSION['Email'];
+                echo "value=" .$_SESSION['Email'];
             }
         ?>
 

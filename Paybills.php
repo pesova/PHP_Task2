@@ -25,6 +25,7 @@
                             <input  readonly type="text" name="Email" value="<?php echo $_SESSION['Email'] ?>">
                         </div>
                     </div>
+                </div>
             <div class="containerr">
                 <div class="">
 
@@ -51,7 +52,7 @@
                 </div>
 
                 
-                <div class="rounded">
+                <div class="">
 
                     <div class="bg-success p-3 rounded-top">
                         <div class="panel-heading">
@@ -179,7 +180,7 @@
 
     <br>
         <br>
-        <a class="btn btn-primary btn-lg mx-auto" href="patient.php">Dashboard</a>
+        <a class="btn btn-primary btn-lg" href="patient.php">Dashboard</a>
 </div>
     
  </html>

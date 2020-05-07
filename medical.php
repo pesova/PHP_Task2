@@ -1,14 +1,11 @@
-<?php session_start();?>
+<?php session_start();
 
-<?php
 if(!isset($_SESSION['loggedIn'])  || $_SESSION['Medical'] !== 'Medical Team (MT)'){
   header("location: SignIn.php?login=expireded");
   exit();
 }
-?>
 
-
-<?php require_once('Lib/header.php');?>
+ require_once('Lib/header.php');?>
 <head>
 
       <title>medical</title>   

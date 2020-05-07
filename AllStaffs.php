@@ -4,7 +4,7 @@
 
                 <h2>  All Staffs</h2>
 
-                <div class="table table-bordered table-hover table-responsive-sm">
+                <div>
                      <table class="table table-bordered table-hover table-responsive-sm">
                          <thead class="thead-light ">
                           <tr class="col">

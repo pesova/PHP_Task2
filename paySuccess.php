@@ -4,6 +4,7 @@
     if (isset($_GET['txref'])) 
     {
         $ref = $_GET['txref'];
+        $_SESSION['ref'] = $ref;
         $amount = $_SESSION['payment']; //Correct Amount from Server
         $currency = "NGN"; //Correct Currency from Server
 

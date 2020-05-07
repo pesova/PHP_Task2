@@ -1,8 +1,8 @@
 <?php
 session_start();
 include_once('Lib/header.php');
-require_once('Functions/alert.php');
-require_once('Functions/getter.php');
+require_once('functions/alert.php');
+require_once('functions/getter.php');
 //require_once('./functions/checkers.php');
 
 ?>

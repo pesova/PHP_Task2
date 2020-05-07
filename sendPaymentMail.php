@@ -18,7 +18,7 @@ if (isset($_GET['Payment']) == "success") {
         'FullName'=>$_SESSION['fullname'],
         'date' => $date,
         'time' => $time,
-        'txRef' => $ref,
+        'txRef' => $_SESSION['ref'],
         'Email'=>$_SESSION['Email'],
         'Amount'=> $_SESSION['payment'],
         'PaymentType'=>$_SESSION['MeetingType']
@@ -35,7 +35,7 @@ $headers = "From: no-reply@snh.org" . "\r\n" . "CC: peso@snh.org";
 
 
 $sent = mail($_SESSION['Email'],$subject,$Message,$headers);
-header("location: http://localhost:8080/HNGTask3-WithFunctions/paid.php");
+header("location: paid.php");
 die();
 
 }else{

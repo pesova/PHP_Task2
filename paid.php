@@ -1,8 +1,9 @@
 <?php require_once('Lib/header.php');?>
 <article>
-    <p>Your Payment is successfull</p>
+    <p class="h4">Your Payment is successfull and Recorded you now click dashboard</p>
 </article>
-<a href="patient.php">Dashboard</a>
+<br> <br>
+<a class="btn btn-primary btn-lg mx-auto" href="patient.php">Dashboard</a>
 
 <?php require_once('Lib/footer.php');?>
 

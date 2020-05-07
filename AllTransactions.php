@@ -1,13 +1,13 @@
 <?php
 session_start();
 include_once('Lib/header.php');
-require_once('Functions/alert.php');
-require_once('Functions/getter.php');
+require_once('functions/alert.php');
+require_once('functions/getter.php');
 
 ?>
 <section>
     <div id="table">
-        <a class="btn btn-outline-danger" href="dashboard.php" style="margin: 20px">&#x2190; Back</a>
+        <a class="btn btn-outline-danger" href="medical.php" style="margin: 20px">&#x2190; Back</a>
         <?php
 
         $rows = AllTransactions();

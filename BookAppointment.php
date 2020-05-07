@@ -1,4 +1,5 @@
-<?php require_once('functions/alert.php');?>
+<?php session_start();
+ require_once('functions/alert.php');?>
 
 <!DOCTYPE html>
 <html>
@@ -15,7 +16,7 @@
 
       <h2>   Book Appointment</h2>
 
-<?php session_start();?>
+
 
       <form class="form" action="AppointmentProcess.php" method="post">
 

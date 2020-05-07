@@ -1,5 +1,6 @@
-<?php require_once('functions/alert.php');?>
-<?php session_start(); ?>
+<?php session_start();
+ require_once('functions/alert.php');?>
+
 
   <!DOCTYPE html>
   <html>
@@ -133,7 +134,7 @@
 
             <p>
                     <br>
-                    <a class = "respon" href="Signin.php">Already have an account? Login</a>
+                    <a class = "respon" href="SignIn.php">Already have an account? Login</a>
             </p>
 
     </div>

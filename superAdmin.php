@@ -1,13 +1,12 @@
-<?php session_start();?>
+<?php session_start();
 
-<?php
+
 if(!isset($_SESSION['loggedIn'])  || $_SESSION['Medical'] !== 'SuperAdmin'){
   header("location: SignIn.php?login=expireded");
   exit();
 }
-?>
 
-<?php require_once('Lib/header.php');?>
+require_once('Lib/header.php');?>
       <title>superAdmin</title>
 
 
@@ -25,8 +24,6 @@ if(!isset($_SESSION['loggedIn'])  || $_SESSION['Medical'] !== 'SuperAdmin'){
 
       <a class="Register login  btn btn-info btn-lg m-1" href="Register.php">Add users</a>
 
-      <a class="btn btn-info btn-lg m-1" href="AllTransactions.php">All Transactions</a>
-
       <a class="Register login  btn btn-info btn-lg m-1" href="AllPatients.php">View Patients</a>
 
       <a class="Register login  btn btn-info btn-lg m-1" href="AllStaffs.php">All Staffs</a>
@@ -35,8 +32,8 @@ if(!isset($_SESSION['loggedIn'])  || $_SESSION['Medical'] !== 'SuperAdmin'){
   </div>
 
 
-  <?php
-require_once('Functions/getter.php');
+<?php
+require_once('functions/getter.php');
 
 ?>
 <section>
@@ -65,12 +62,10 @@ require_once('Functions/getter.php');
                 <tbody>
                     <?php
                     echo $rows;
+        }
                     ?>
                 </tbody>
             </table>
-        <?php } else { ?>
-            <p>payment Made Yet</p>
-        <?php } ?>
 
     </div>
 </section>
