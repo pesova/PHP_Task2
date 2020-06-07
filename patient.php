@@ -1,48 +1,63 @@
+<?php session_start();
 
-<head>
-      <meta charset="utf-8" />
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+if(!isset($_SESSION['loggedIn']) || $_SESSION['patient'] !== 'Patient'){
+  header("location: SignIn.php?login=expireded");
+  exit();
+}
+?>
+
+
+<?php require_once('functions/alert.php');?>
+<?php require_once('Lib/header.php');?>
+
       <title>patient</title>
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <link rel="stylesheet" href="style.css">
 
-  </head>
-<div class="patient">
 
-<h3>Dashboard</h3>
+  <body>
+    <div class="patient">
 
-<hr>
-<?php 
+      <br>
 
-echo "<h1><p>This page is for Patient</p></h1>"
-?>
-<br>
-<div class="patient">
+      <h3 class="lead display-4"><strong>Dashboard<strong></h3>
 
-<?php session_start();?>
+    <?php
+
+echo "<h1 class='lead display-4'><p>This page is for Patient</p></h1>";
+    ?>
+    <br>
+    <div class="patient">
 
 
 
-<B>Welcome, <?php echo $_SESSION['fullname'] ?>, You are logged in as (<?php echo $_SESSION['role'] ?>), and your ID is <?php echo $_SESSION['loggedIn'] ?></b>
+    <b class="lead display-4 font-weight-bolder">Welcome, <?php echo $_SESSION['fullname'] ?>, You are logged in as (<?php echo $_SESSION['role'] ?>), and your ID is <?php echo $_SESSION['loggedId'] ?></b>
 
-<?php (getdate());
-echo "<br><br>";
+    <?php (getdate());
+    echo "<br><br>";
 
-$mydate = getdate(date("U"));
-?>
+    $mydate = getdate(date("U"));
+    ?>
 
-<pre>Logedd in Time:  <?php echo  $_SESSION['Time']?></pre>
+    <pre class="text-danger">Logedd in Time:  <?php echo  $_SESSION['Time']?></pre>
 
-<pre>Logged in date: <?php echo  $_SESSION['Date']?></pre>
+    <pre class="text-danger">Logged in date: <?php echo  $_SESSION['Date']?></pre>
 
-<br>
+    <br>
+    <br>
 
-<div class="logout">
-    <a href="index.php">Home</a>
-  </div>
+    <div class="Action">
 
-<div class="logout">
-    <a href="logout.php">Logout</a>
-</div>
+        <a class="btn btn-primary m-1" href="BookAppointment.php">Book Appointment</a>
 
-</div>
+        <a class="btn btn-info m-1" href="Paybills.php">Paybills</a>
+
+        <a class="btn btn-info m-1" href="patientPayHistory.php">Payment Hisotry</a>
+
+        <a class="btn btn-secondary m-1" href="logout.php">Logout</a>
+      </div>
+        
+
+<?php Appointment(); ?>
+    </div>
+
+<?php require_once('Lib/footer.php');?>

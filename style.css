@@ -1,4 +1,39 @@
-.startng {
+* {
+    padding: 0px;
+    border: 0px;
+    margin: 0px;
+}
+
+.container-fluid {
+    padding-right: 0px;
+    padding-left: 0px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.containerr {
+    border-radius: 15px;
+    display: grid;
+    gap: 15px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    min-height: 100%;
+}
+
+#bg-dark {
+    background-color: rgb(173, 173, 173);
+}
+
+#infoMeeting {
+    background-color: rgba(182, 179, 179, 0.678);
+}
+
+.mainGrid {
+    height: 400px;
+}
+
+
+/*.startng {
     text-decoration: none;
     font-size: 50px;
     text-align: center;
@@ -8,6 +43,7 @@
 .reg {
     font-size: 30px;
 }
+*/
 
 .form {
     background-color: #fefefe;
@@ -28,6 +64,19 @@ input {
     border-radius: 20px;
     outline: none;
     background-color: rgb(243, 243, 243);
+}
+
+textarea {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    border-radius: 20px;
+    outline: none;
+    background-color: rgb(243, 243, 243);
+    font-size: 120%;
 }
 
 a {
@@ -53,7 +102,7 @@ a:hover {
 
 #select option {
     width: 100%;
-    padding: 18px 20px;
+    padding: 1px 2px;
     margin: 15px;
     box-sizing: border-box;
     border-radius: 20px;
@@ -85,24 +134,80 @@ h2 {
     position: relative;
 }
 
+#H1 {
+    text-align: center;
+    margin: 20px 10px 2px 0;
+    position: relative;
+    font-size: 170%;
+}
+
+.display-4 {
+    font-size: 150%;
+}
+
 p {
     text-align: center;
     margin: 0;
 }
 
-.error {
+@media only screen and (max-width: 525px) {
+    .form {
+        background-color: #fefefe;
+        margin: 5% auto 1% auto;
+        border: 1px solid #888;
+        width: 95%;
+        padding: 20px;
+        border-radius: 20px;
+    }
+    input {
+        width: 100%;
+        padding: 8px 15px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+        border-radius: 20px;
+        outline: none;
+        background-color: rgb(243, 243, 243);
+    }
+    button {
+        background-color: #4CAF50;
+        color: white;
+        padding: 10px 15px;
+        margin: 10px 0;
+        border: none;
+        cursor: pointer;
+        width: 100%;
+        border-radius: 10px;
+    }
+    #H1 {
+        text-align: center;
+        margin: 20px 10px 2px 0;
+        position: relative;
+        font-size: 100%;
+    }
+    .display-4 {
+        font-size: 100%;
+    }
+    .respon {
+        font-size: 80%;
+    }
+}
+
+
+/*.error {
     color: red;
-    font-size: 25px;
-    text-align: center;
-    position: relative;
-    bottom: 770px;
+    font-size: 20px;
 }
 
 .success {
     color: green;
+    font-size: 20px;
 }
+*/
 
-.patient {
+
+/*.patient {
     background-color: rgb(230, 227, 227);
     margin: 0px;
     border: 0px;
@@ -133,8 +238,10 @@ p {
     text-decoration: solid;
     font-size: 20px;
 }
+*/
 
-.medical {
+
+/*.medical {
     background-color: rgb(230, 227, 227);
     margin: 0px;
     border: 0px;
@@ -164,8 +271,10 @@ p {
     text-align: center;
     font-size: 20px;
 }
+*/
 
-.Home {
+
+/*.Home {
     background-color: rgb(230, 227, 227);
     margin: 0px;
     border: 0px;
@@ -196,3 +305,4 @@ p {
     width: 100%;
     font-size: 30px;
 }
+*/
